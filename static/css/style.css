@@ -255,3 +255,18 @@ a {
 .text-success {
     color: var(--falconn-red) !important;
 }
+
+/* Remaining green -> Falconn theme */
+h1, .page-title {
+    color: var(--falconn-red);
+}
+
+.btn-outline-success {
+    color: var(--falconn-red) !important;
+    border-color: var(--falconn-red) !important;
+}
+
+.btn-outline-success:hover {
+    background-color: var(--falconn-red) !important;
+    color: #fff !important;
+}
