@@ -15,17 +15,17 @@
   --dk-dark-bg: #313348;
   --dk-darker-bg: #2a2b3d;
   --navbar-bg-color: #6f6486;
-  --sidebar-bg-color: #252636;
+  --sidebar-bg-color: #141414;
   --sidebar-width: 250px;
   --sidebar-expanded-width: 230px;
   --sidebar-collapsed-width: 100px;
-  --sidebar-header-bg: #212529;
+  --sidebar-header-bg: #0d0d0d;
   --nav-link-color: #adb5bd;
-  --nav-link-active-bg: #495057;
-  --dropdown-menu-bg: #495057;
+  --nav-link-active-bg: #c8102e;
+  --dropdown-menu-bg: #1f1f1f;
   --dropdown-item-color: #adb5bd;
-  --dropdown-item-active-bg: #6c757d;
-  --sidebar-separator-bg: #4caf50;
+  --dropdown-item-active-bg: #c8102e;
+  --sidebar-separator-bg: #d4af37;
   --logo-separator-height: 60px;
   --sidebar-item-height: 50px;
   --submenu-item-height: 45px;
@@ -222,4 +222,36 @@ a {
 
 .navbar .navbar-nav > li > a > i {
   font-size: 18px;
+}
+
+/* ===== Falconn Stock Inv theme ===== */
+:root {
+    --falconn-black: #0d0d0d;
+    --falconn-red: #c8102e;
+    --falconn-gold: #d4af37;
+}
+
+.falconn-nav {
+    background-color: var(--falconn-black);
+    border-bottom: 3px solid var(--falconn-gold);
+}
+
+.brand-gold {
+    color: var(--falconn-gold);
+}
+
+/* Red buttons and green text -> Falconn red */
+.btn-success {
+    background-color: var(--falconn-red) !important;
+    border-color: var(--falconn-red) !important;
+    color: #fff !important;
+}
+
+.btn-success:hover {
+    background-color: #a00d25 !important;
+    border-color: #a00d25 !important;
+}
+
+.text-success {
+    color: var(--falconn-red) !important;
 }
