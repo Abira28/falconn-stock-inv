@@ -112,3 +112,8 @@ ipython_config.py
 
 # pytype
 .pytype/
+
+# My local files
+db.sqlite3
+media/
+venv/
