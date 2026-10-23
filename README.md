@@ -1,143 +1,134 @@
+# Falconn Stock Inv
 
-<div align="center">
-  <img src="https://res.cloudinary.com/murste/image/upload/v1698907632/stevolve_x8ioeu.png" alt="Stephen Murichu's Logo" width="100" />
-</div>
+A sales and inventory management system built with Django. It helps a small business keep track of products, vendors, purchases, sales, invoices and bills, and lets staff work from their own accounts with different roles.
 
-# Django-inventory-management
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/license/mit)
-[![Python Version](https://img.shields.io/badge/Python-3.12-green)](https://www.python.org/downloads/)
-
-## Table of Contents
-- [Django-inventory-management](#django-inventory-management)
-  - [Table of Contents](#table-of-contents)
-  - [Description](#description)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-    - [Clone the Repository](#clone-the-repository)
-    - [With Docker](#with-docker)
-    - [Without Docker](#without-docker)
-      - [On Linux](#on-linux)
-      - [On Windows](#on-windows)
-  - [Screenshots](#screenshots)
-  - [Authors](#authors)
-
-## Description
-This Django application offers a solution for managing business operations with an emphasis on user experience and modern web technologies. It integrates Bootstrap for front-end design and employs Ajax for dynamic sales creation. The application features models for user profiles, vendors, customers, and transactions, including billing, invoicing, and inventory management.
-
-## Prerequisites
-- **Python installed**: Ensure Python is installed on your system. You can download it from the official [Python website](https://www.python.org/).
-- **Understand Python and Django**: Basic understanding of Python programming and familiarity with Django web framework.
-
-## Installation
-
-Follow these steps to install the necessary dependencies and set up the application:
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/munuhee/sales-and-inventory-management.git
-cd sales-and-inventory-management
-```
-
-### With Docker
-
-1. **Build the Docker Image**
-
-    ```bash
-    docker build -t sales-and-inventory-management:1.0 .
-    ```
-
-2. **Run the Docker Container**
-
-    ```bash
-    docker run -d -p 8000:8000 sales-and-inventory-management:1.0
-    ```
-
-### Without Docker
-
-#### On Linux
-
-1. **Set Up the Virtual Environment**
-
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
-
-2. **Install Dependencies**
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. **Apply Migrations and Run the Server**
-
-    ```bash
-    python manage.py migrate
-    python manage.py runserver
-    ```
-
-#### On Windows
-
-1. **Set Up the Virtual Environment**
-
-    ```bash
-    python -m venv venv
-    venv\Scripts\activate
-    ```
-
-2. **Install Dependencies**
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3. **Apply Migrations and Run the Server**
-
-    ```bash
-    python manage.py migrate
-    python manage.py runserver
-    ```
+This is my customised version of an open-source project. See [Credits](#credits) below.
 
 ## Screenshots
 
-<details>
-  <summary>Click to view screenshots</summary>
+> Add your screenshots to a `docs/screenshots/` folder and update these paths.
 
-  ![screenshot_1](https://github.com/user-attachments/assets/9bb2f5f9-d456-4681-b5de-8d82a3ef97d8)
+| Dashboard | Products |
+|---|---|
+| ![Dashboard](docs/screenshots/dashboard.png) | ![Products](docs/screenshots/products.png) |
 
-  ![screenshot_2](https://github.com/user-attachments/assets/d6e14ba3-8827-41c1-9cdb-8f24add83f4d)
+| Staff |
+|---|
+| ![Staff](docs/screenshots/staff.png) |
 
-  ![screenshot_3](https://github.com/user-attachments/assets/6be5060e-974b-4289-bcdf-b852771833f8)
+## Features
 
-  ![screenshot_4](https://github.com/user-attachments/assets/5b176c44-82dd-4080-8259-0976029a496f)
+- **Products and categories:** add items with a description, category, quantity, price, expiry date and vendor
+- **Vendors:** store supplier names, phone numbers and addresses
+- **Sales and purchase orders:** record what is sold and what is bought
+- **Invoices and bills:** generate and keep billing records
+- **Staff accounts:** each person has a profile with a picture, phone number, email, status (Active, Inactive, On leave) and role (Operative, Executive, Admin)
+- **Search and sorting** on the product and staff tables
+- **Export to Excel** from the product and staff pages
+- **Django admin panel** for managing all data
 
-  ![screenshot_5](https://github.com/user-attachments/assets/c9ab8f77-bf2a-4b1e-bc66-986101d4991b)
+## What I changed
 
-  ![screenshot_6](https://github.com/user-attachments/assets/3db3ca87-28a8-4fee-8cc7-fcc9481076f4)
+- Rebranded the interface as **Falconn Stock Inv**, with a black, red and gold theme
+- Switched the database from PostgreSQL to **SQLite** so it runs locally with no extra setup
+- Set up media handling so profile pictures upload and display correctly
+- Moved the secret key and debug setting to environment variables, and removed the original deployment details
+- Added sample vendors, categories, products and staff for testing
 
-  ![screenshot_7](https://github.com/user-attachments/assets/1197a79f-8e11-41e1-a8a8-4ea5f0ac0391)
+## Built with
 
-  ![screenshot_8](https://github.com/user-attachments/assets/a340d85b-76dc-4618-b530-97cd620ef649)
+- Python and Django 5.1
+- SQLite
+- Bootstrap and custom CSS
+- Django admin
 
-  ![screenshot_9](https://github.com/user-attachments/assets/751fe028-6115-424e-b69c-0fedfa9f321f)
+## Getting started
 
-  ![screenshot_10](https://github.com/user-attachments/assets/d3905ec2-c843-468c-bdd4-799955854fd6)
+### Requirements
 
-  ![screenshot_11](https://github.com/user-attachments/assets/99bb9f1c-4688-4049-b31e-5de1bd817304)
+- Python 3.11 or newer
+- Git
 
-  ![screenshot_12](https://github.com/user-attachments/assets/a0ea68c0-2969-42e4-81cd-fbf6efffd569)
+### Installation
 
-  ![screenshot_13](https://github.com/user-attachments/assets/9fbd7b1c-d60c-456a-957c-4a033cf76d89)
+```bash
+git clone https://github.com/Abira28/sales-and-inventory-management.git
+cd sales-and-inventory-management
+git checkout my-version
+```
 
-  ![screenshot_14](https://github.com/user-attachments/assets/b6eabb9a-119a-418d-af56-b44d316bf6be)
+Create and activate a virtual environment.
 
-  ![screenshot_15](https://github.com/user-attachments/assets/ec117dfd-e0ee-46ff-9486-b5262f58b901)
+On Windows:
 
-</details>
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
 
-## Authors
+On macOS or Linux:
 
-- [Stephen Murichu](https://github.com/munuhee)
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
 
-                                            Happy coding! 🚀
+Install the packages and set up the database:
+
+```bash
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser
+```
+
+### Default profile picture
+
+New profiles use `media/profile_pics/default.jpg`. The `media/` folder is not stored in Git, so create the folder and put any square image named `default.jpg` inside it:
+
+```
+media/
+  profile_pics/
+    default.jpg
+```
+
+### Run the app
+
+```bash
+python manage.py runserver
+```
+
+Then open:
+
+- The app: http://127.0.0.1:8000
+- The admin panel: http://127.0.0.1:8000/admin/
+
+### Settings
+
+These can be set as environment variables. The defaults suit local development only.
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `SECRET_KEY` | a local development key | Django secret key. Always set your own in production. |
+| `DEBUG` | `True` | Set to `False` in production. |
+
+If you deploy the app, also add your domain to `ALLOWED_HOSTS` in `InventoryMS/settings.py`.
+
+## Project structure
+
+| Folder | Purpose |
+|---|---|
+| `InventoryMS/` | Project settings and main URLs |
+| `accounts/` | Staff profiles, roles and vendors |
+| `store/` | Products, categories and deliveries |
+| `transactions/` | Sales and purchases |
+| `invoice/` | Invoices |
+| `bills/` | Bills |
+| `static/` | CSS, JavaScript and images |
+
+## Credits
+
+This project is a fork of [lanwaswa/sales-and-inventory-management](https://github.com/lanwaswa/sales-and-inventory-management). All credit for the original application goes to its author. My changes are listed under [What I changed](#what-i-changed).
+
+## License
+
+This project keeps the license of the original work. See the [LICENSE](LICENSE) file for details.
