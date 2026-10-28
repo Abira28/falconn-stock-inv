@@ -54,7 +54,6 @@ This is my customised version of an open-source project. See [Credits](#credits)
 ```bash
 git clone https://github.com/Abira28/sales-and-inventory-management.git
 cd sales-and-inventory-management
-git checkout my-version
 ```
 
 Create and activate a virtual environment.
