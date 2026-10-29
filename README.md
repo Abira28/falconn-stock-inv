@@ -52,8 +52,8 @@ This is my customised version of an open-source project. See [Credits](#credits)
 ### Installation
 
 ```bash
-git clone https://github.com/Abira28/sales-and-inventory-management.git
-cd sales-and-inventory-management
+git clone https://github.com/Abira28/falconn-stock-inv.git
+cd falconn-stock-inv
 ```
 
 Create and activate a virtual environment.
